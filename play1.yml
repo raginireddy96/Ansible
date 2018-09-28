@@ -1,0 +1,9 @@
+---
+  - hosts: localhost
+    become_method: sudo
+    user: root
+    tasks:
+      - name: updgrade all packages
+        yum: 
+          name: '*'
+          state: latest
